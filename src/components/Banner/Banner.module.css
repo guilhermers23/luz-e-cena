@@ -6,7 +6,7 @@
 
 .title {
     position: absolute;
-    top: 0;
+    top: 120px;
     left: 15%;
     font-family: var(--fonte-titulo);
     font-size: 4rem;

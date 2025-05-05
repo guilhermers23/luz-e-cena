@@ -7,7 +7,7 @@ interface BannerProps {
     text2: string;
 }
 
-export const Banner = ({ src, alt, text1, text2 }: BannerProps) => {
+const Banner = ({ src, alt, text1, text2 }: BannerProps) => {
     return (
         <>
             <img src={src} alt={alt} className={style.banner} />
@@ -16,3 +16,5 @@ export const Banner = ({ src, alt, text1, text2 }: BannerProps) => {
         </>
     )
 };
+
+export default Banner;
