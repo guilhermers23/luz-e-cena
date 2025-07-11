@@ -1,5 +1,5 @@
 import CardMovie from "../CardMovie";
-import { IMovie } from "../interfaces/IMovies";
+import { IMovie } from "../../interfaces/IMovies";
 import * as S from "./MoviesList.styled";
 
 type PropsMovies = { listMovies: IMovie[] };

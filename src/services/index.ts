@@ -1,5 +1,5 @@
 import axios from "axios";
-import { IMovie } from "../components/interfaces/IMovies";
+import { IMovie } from "../interfaces/IMovies";
 
 const BASE_URL = "http://localhost:3001";
 

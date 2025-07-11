@@ -1,4 +1,4 @@
-import { Categoria, FaixaEtaria } from "../interfaces/IMovies";
+import { Categoria, FaixaEtaria } from "../../interfaces/IMovies";
 import * as S from "./Tag.styled";
 
 export interface PropsTag { value: Categoria | FaixaEtaria };

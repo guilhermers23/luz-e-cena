@@ -1,4 +1,4 @@
-import { IMovie } from "../interfaces/IMovies";
+import { IMovie } from "../../interfaces/IMovies";
 import Tag from "../Tag";
 import * as S from "./CardMovie.styled";
 
