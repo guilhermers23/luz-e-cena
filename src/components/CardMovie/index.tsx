@@ -15,7 +15,7 @@ const CardMovie = ({ src, alt, titulo, categoria, faixaEtaria, duracao, genero }
                         <Tag value={categoria} />
                     </S.SectionCard>
                     <S.SectionCard>
-                        <p>{duracao}</p>
+                        <p>Duração: {duracao}min</p>
                         <Tag value={faixaEtaria} />
                     </S.SectionCard>
                 </S.Informacoes>

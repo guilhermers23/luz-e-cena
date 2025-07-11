@@ -2,14 +2,15 @@ import CardMovie from "../CardMovie";
 import { IMovie } from "../interfaces/IMovies";
 import * as S from "./MoviesList.styled";
 
-type PropsMovies = { movies: IMovie[] };
+type PropsMovies = { listMovies: IMovie[] };
 
-const MoviesList = ({ movies }: PropsMovies) => {
+const MoviesList = ({ listMovies }: PropsMovies) => (
+
     <S.Lista>
-        {movies.map(filme => (
+        {listMovies.map(filme => (
             <CardMovie key={filme.id} {...filme} />
         ))}
     </S.Lista>
-};
+);
 
 export default MoviesList;
