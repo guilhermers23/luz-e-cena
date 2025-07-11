@@ -1,15 +1,27 @@
+import { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import Button from "../Button";
 import Fieldset from "../Fieldset";
 import InputText from "../InputText";
 import MoviesList from "../MoviesList";
-import * as S from "./MovieSection";
 import { IMovie } from "../interfaces/IMovies";
-import data from "../../db/dataMovies.json";
-
-const movies = data as IMovie[];
+import { getMovies } from "../../services";
+import * as S from "./MovieSection";
 
 const MovieSection = () => {
+    const [movies, setMovies] = useState<IMovie[]>([]);
+
+    const fetchMovies = async () => {
+        try {
+            const res = await getMovies();
+            setMovies(res);
+        } catch (error) {
+            console.error("Ocorreu um erro ao buscar os filmes", error);
+        }
+    };
+
+    useEffect(() => { fetchMovies() });
+
     return (
         <main>
             <S.Container>
