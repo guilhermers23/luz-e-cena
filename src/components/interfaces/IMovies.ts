@@ -1,4 +1,11 @@
-import { Categoria, FaixaEtaria } from "../Tag";
+export type Categoria = "2D" | "3D";
+export type FaixaEtaria =
+  | "Livre"
+  | "10 anos"
+  | "12 anos"
+  | "14 anos"
+  | "16 anos"
+  | "18 anos";
 
 export interface IMovie {
   id: number;
