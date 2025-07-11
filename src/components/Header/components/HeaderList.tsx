@@ -1,9 +1,7 @@
-import styles from "../Header.module.css";
+import * as S from "./../Header.styled";
 
-const HeaderList = ({ children }: React.HTMLAttributes<HTMLUListElement>) => {
-    return (
-        <ul className={styles.cabecalho}>{children}</ul>
-    )
-};
+const HeaderList = ({ children }: React.HTMLAttributes<HTMLUListElement>) => (
+    <S.Cabecalho>{children}</S.Cabecalho>
+);
 
 export default HeaderList;

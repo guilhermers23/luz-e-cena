@@ -1,9 +1,7 @@
-import styles from "../Header.module.css";
+import * as S from "../Header.styled";
 
-const HeaderListItem = ({ children }: React.HTMLAttributes<HTMLUListElement>) => {
-    return (
-        <li className={styles.menuItem}>{children}</li>
-    )
-};
+const HeaderListItem = ({ children }: React.HTMLAttributes<HTMLUListElement>) => (
+    <S.MenuItem>{children}</S.MenuItem>
+);
 
 export default HeaderListItem;

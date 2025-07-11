@@ -1,4 +1,4 @@
-import style from "./banner.module.css";
+import * as S from "./Banner.styled";
 
 interface BannerProps {
     src: string;
@@ -10,9 +10,10 @@ interface BannerProps {
 const Banner = ({ src, alt, text1, text2 }: BannerProps) => {
     return (
         <>
-            <img src={src} alt={alt} className={style.banner} />
-            <h2 className={style.title}>
-                <span>{text1}</span> {text2}</h2>
+            <S.Banner src={src} alt={alt} />
+            <S.Title>
+                <span>{text1}</span> {text2}
+            </S.Title>
         </>
     )
 };

@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components";
+
+const GlobalStyles = createGlobalStyle`
 :root {
     --preto: #1e1e1e;
     --cinza-escuro: #252530;
@@ -63,3 +66,6 @@ main {
     flex-direction: column;
     align-items: center;
 }
+`;
+
+export default GlobalStyles;
