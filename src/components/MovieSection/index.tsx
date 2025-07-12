@@ -6,6 +6,7 @@ import MoviesList from "../MoviesList";
 import UseFetchMovies from "../../hooks/useFetchMovies";
 import useFilterMovies from "../../hooks/useFilterMovies";
 import * as S from "./MovieSection";
+import * as GS from "../../styles/GlobalStyles";
 
 const MovieSection = () => {
     const { movies, loading, erro } = UseFetchMovies();
@@ -22,9 +23,10 @@ const MovieSection = () => {
                     </Button>
                 </Fieldset>
                 <S.Titulo>Em Cartaz</S.Titulo>
-                {loading ? <p>Carregando...</p> : erro ? <p>{erro}</p> : (
-                    <MoviesList listMovies={filteredMovies} />
-                )}
+                {loading ? <p>Carregando...</p> :
+                    erro ? <GS.Error>{erro}</GS.Error> : (
+                        <MoviesList listMovies={filteredMovies} />
+                    )}
             </S.Container>
         </main>
     )

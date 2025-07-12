@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
 :root {
@@ -67,5 +67,11 @@ main {
     align-items: center;
 }
 `;
+
+export const Error = styled.p`
+    color: #e63946;
+    font-size: var(--font-size-s);
+    margin-top: var(--margin-s);  
+`
 
 export default GlobalStyles;

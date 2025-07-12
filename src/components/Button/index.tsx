@@ -1,19 +1,20 @@
-import styles from "./Button.module.css";
-import classNames from "classnames";
+import { JSX } from "react";
+import * as S from "./Button.styled";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     variant: "default" | "icon";
 };
 
 const Button = ({ children, variant = "default", ...props }: ButtonProps) => {
-    const classMap = {
-        default: styles.default,
-        icon: styles.icon
+    const botaoRender = (variant: string): JSX.Element => {
+        if (variant === "icon") {
+            return <S.BotaoIcon {...props}>{children}</S.BotaoIcon>;
+        } else {
+            return <S.BotaoDefault {...props}>{children}</S.BotaoDefault>
+        }
     };
 
-    return (
-        <button className={classNames(styles.botao, classMap[variant])} {...props}>{children}</button>
-    )
+    return botaoRender(variant);
 };
 
 export default Button;
